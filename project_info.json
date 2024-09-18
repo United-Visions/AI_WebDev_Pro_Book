@@ -1,0 +1,12 @@
+{
+  "name": "AI_WebDev_Pro_Book",
+  "created_at": "2024-09-18 12:13:27",
+  "updated_at": "2024-09-18 12:13:27",
+  "status": "initiated",
+  "frontend_framework": "bulma",
+  "icon_library": "phosphor-icons",
+  "animation_library": "dynamics.js",
+  "user_id": 165522684,
+  "user_login": "United-Visions",
+  "github_repo": "https://github.com/United-Visions/AI_WebDev_Pro_Book"
+}

@@ -1,0 +1,86 @@
+<section id="contact" class="uk-section uk-section-muted">
+    <div class="uk-container">
+        <h2 class="uk-heading-medium uk-text-center">Contact Us</h2>
+        <div class="uk-grid uk-child-width-1-2@m uk-margin-large-top" uk-grid>
+            <div>
+                <h3 class="uk-heading-small">Get in Touch</h3>
+                <p class="uk-text-lead">Have questions about AI WebDev Pro Book? We're here to help!</p>
+                <ul class="uk-list uk-list-large uk-margin-medium-top">
+                    <li>
+                        <span class="uk-margin-small-right" uk-icon="icon: mail"></span>
+                        <a href="mailto:info@aiwebdevprobook.com">info@aiwebdevprobook.com</a>
+                    </li>
+                    <li>
+                        <span class="uk-margin-small-right" uk-icon="icon: receiver"></span>
+                        +1 (555) 123-4567
+                    </li>
+                    <li>
+                        <span class="uk-margin-small-right" uk-icon="icon: location"></span>
+                        123 Tech Street, San Francisco, CA 94105
+                    </li>
+                </ul>
+                <div class="uk-margin-medium-top">
+                    <a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                    <a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="facebook"></a>
+                    <a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="linkedin"></a>
+                    <a href="#" class="uk-icon-button" uk-icon="github"></a>
+                </div>
+            </div>
+            <div>
+                <form id="contact-form" class="uk-form-stacked">
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="name">Name</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="name" type="text" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="email">Email</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="email" type="email" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="message">Message</label>
+                        <div class="uk-form-controls">
+                            <textarea class="uk-textarea" id="message" rows="5" required></textarea>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <button class="uk-button uk-button-primary" type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const response = await fetch('/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, message })
+        });
+
+        if (response.ok) {
+            UIkit.notification({
+                message: 'Thank you for your message. We\'ll get back to you soon!',
+                status: 'success'
+            });
+            document.getElementById('contact-form').reset();
+        } else {
+            UIkit.notification({
+                message: 'An error occurred. Please try again.',
+                status: 'danger'
+            });
+        }
+    });
+</script>

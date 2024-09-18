@@ -1,0 +1,99 @@
+{
+  "app_name": "AI WebDev Pro Book",
+  "description": "A landing page to promote and sell a book on using AI for web development excellence",
+  "backend": {
+    "main_app": {
+      "file_name": "app.py",
+      "path": "/",
+      "elements": [
+        "Flask app initialization",
+        "Route for home page",
+        "Route for order processing",
+        "Email confirmation function",
+        "Database connection and management"
+      ]
+    },
+    "config": {
+      "file_name": "config.py",
+      "path": "/",
+      "elements": [
+        "Configuration variables",
+        "Environment-specific settings"
+      ]
+    }
+  },
+  "frontend": {
+    "main_template": {
+      "file_name": "index.html",
+      "path": "/templates/",
+      "elements": [
+        "Hero section with book cover and title",
+        "Author bio",
+        "Book description and benefits",
+        "Testimonials",
+        "Pricing and purchase button",
+        "FAQ section",
+        "Contact form"
+      ]
+    },
+    "styles": {
+      "file_name": "styles.css",
+      "path": "/static/css/",
+      "elements": [
+        "Custom styles for landing page",
+        "Responsive design rules"
+      ]
+    },
+    "scripts": {
+      "file_name": "main.js",
+      "path": "/static/js/",
+      "elements": [
+        "Form validation",
+        "Smooth scrolling",
+        "Interactive FAQ toggles"
+      ]
+    }
+  },
+  "api_endpoints": [
+    {
+      "path": "/",
+      "method": "GET",
+      "description": "Render the landing page"
+    },
+    {
+      "path": "/order",
+      "method": "POST",
+      "description": "Process book order and payment"
+    },
+    {
+      "path": "/contact",
+      "method": "POST",
+      "description": "Handle contact form submissions"
+    }
+  ],
+  "data_models": [
+    {
+      "name": "Order",
+      "fields": [
+        "id",
+        "customer_name",
+        "customer_email",
+        "order_date",
+        "payment_status"
+      ]
+    },
+    {
+      "name": "Contact",
+      "fields": [
+        "id",
+        "name",
+        "email",
+        "message",
+        "submission_date"
+      ]
+    }
+  ],
+  "selected_framework": "bulma",
+  "selected_icon_library": "phosphor-icons",
+  "selected_animation_library": "dynamics.js"
+}

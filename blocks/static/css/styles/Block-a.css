@@ -1,0 +1,302 @@
+/* Custom styles for landing page */
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Hero section */
+.hero-section {
+    background: linear-gradient(135deg, #4a90e2, #8e44ad);
+    padding: 100px 0;
+}
+
+.hero-content {
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-cta {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-cta:hover {
+    background-color: #e67e22;
+}
+
+/* Author bio */
+.author-bio {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.author-image {
+    border-radius: 50%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Book description and benefits */
+.book-description {
+    padding: 80px 0;
+}
+
+.benefit-item {
+    margin-bottom: 30px;
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: #f1f8ff;
+    padding: 80px 0;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-weight: 700;
+}
+
+/* Pricing and purchase */
+.pricing-section {
+    padding: 80px 0;
+}
+
+.price-tag {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+.purchase-btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.purchase-btn:hover {
+    background-color: #2ecc71;
+}
+
+/* FAQ section */
+.faq-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-weight: 700;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #dee2e6;
+}
+
+.faq-answer {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    display: none;
+}
+
+/* Contact form */
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 20px;
+}
+
+.contact-submit-btn {
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+    background-color: #3a7bd5;
+}
+
+/* Responsive design rules */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .price-tag {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .price-tag {
+        font-size: 2rem;
+    }
+
+    .hero-cta,
+    .purchase-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* UIkit overrides */
+.uk-button-primary {
+    background-color: #4a90e2;
+}
+
+.uk-button-primary:hover {
+    background-color: #3a7bd5;
+}
+
+.uk-card {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.uk-section-primary {
+    background: linear-gradient(135deg, #4a90e2, #8e44ad);
+}
+
+/* Themify icons styles */
+.ti {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Vivus animations */
+.animated-icon {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Scroll reveal */
+.reveal {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Print styles */
+@media print {
+    .hero-section,
+    .pricing-section,
+    .contact-section {
+        page-break-inside: avoid;
+    }
+
+    .hero-cta,
+    .purchase-btn,
+    .contact-submit-btn {
+        display: none;
+    }
+}
